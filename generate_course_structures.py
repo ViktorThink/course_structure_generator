@@ -196,12 +196,13 @@ def generate_course_structure(name, description, target_group, learning_goals, n
 
 
 def translate(source_lang, target_lang, text):
+    print("translating")
     availableLanguagesDeepL=["EN","ES","ZH","FR","RU","PT-PT","DE","IT","NL","PL","JA","PT-BR","SV"]
 
     assert target_lang in availableLanguagesDeepL
 
     data = {
-      'auth_key': "25627dda-19f9-9440-75f7-beb6eac01235",
+      'auth_key': args.deepL_api_key,
       'text': text,
       'target_lang': target_lang,
     }
@@ -226,5 +227,5 @@ def translate(source_lang, target_lang, text):
 for i in range(args.num_generations):
     course_structure = generate_course_structure(args.course_name, args.description, args.target_group, args.learning_goals, args.num_modules, language=args.language)
     
-    with open(args.file_output_name + "_" + str(i) + ".xtx", "w") as text_file:
+    with open(args.file_output_name + "_" + str(i+1) + ".txt", "w") as text_file:
         text_file.write(course_structure)
