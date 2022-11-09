@@ -222,7 +222,7 @@ def translate(source_lang, target_lang, text):
     return text
 
 for i in range(args.num_generations):
-    course_structure = generate_course_structure(args.course_name, args.description, args.target_group, args.learning_goals, args.num_modules, args.language=language)
+    course_structure = generate_course_structure(args.course_name, args.description, args.target_group, args.learning_goals, args.num_modules, language=args.language)
     
     with open(args.file_output_name + "_" + str(i) + ".xtx", "w") as text_file:
         text_file.write(course_structure)
