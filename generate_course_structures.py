@@ -8,22 +8,22 @@ import argparse
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument('--openai_api_key', required=True, type= str)
-parser.add_argument('--deepL_api_key', required=True, type= str)
+# parser.add_argument('--openai_api_key', required=True, type= str)
+# parser.add_argument('--deepL_api_key', required=True, type= str)
 
-parser.add_argument('--model_name', required=False, type= str, default="text-davinci-002")
-parser.add_argument('--temperature', required=False, type= float, default=0.8)
+# parser.add_argument('--model_name', required=False, type= str, default="text-davinci-002")
+# parser.add_argument('--temperature', required=False, type= float, default=0.8)
 
-parser.add_argument('--num_generations', required=False, type=int, default=1)
+# parser.add_argument('--num_generations', required=False, type=int, default=1)
 
-parser.add_argument('--file_output_name', required=False, type=str, default="course_structure_suggestion")
+# parser.add_argument('--file_output_name', required=False, type=str, default="course_structure_suggestion")
 
 
 parser.add_argument('--course_name', required=True, type= str)
-parser.add_argument('--description', required=True, type= str)
-parser.add_argument('--target_group', required=True, type= str)
-parser.add_argument('--learning_goals', required=True, type= str)
-parser.add_argument('--num_modules', required=True, type=str, default="7")
+# parser.add_argument('--description', required=True, type= str)
+# parser.add_argument('--target_group', required=True, type= str)
+# parser.add_argument('--learning_goals', required=True, type= str)
+# parser.add_argument('--num_modules', required=True, type=str, default="7")
 
 args = parser.parse_args()
 
