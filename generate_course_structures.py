@@ -24,6 +24,8 @@ parser.add_argument('--description', required=True, type= str)
 parser.add_argument('--target_group', required=True, type= str)
 parser.add_argument('--learning_goals', required=True, type= str)
 parser.add_argument('--num_modules', required=True, type=str, default="7")
+parser.add_argument('--language', required=False, type= str, default="EN")
+
 
 args = parser.parse_args()
 
