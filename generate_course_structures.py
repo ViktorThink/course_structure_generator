@@ -196,7 +196,6 @@ def generate_course_structure(name, description, target_group, learning_goals, n
 
 
 def translate(source_lang, target_lang, text):
-    print("translating")
     availableLanguagesDeepL=["EN","ES","ZH","FR","RU","PT-PT","DE","IT","NL","PL","JA","PT-BR","SV"]
 
     assert target_lang in availableLanguagesDeepL
