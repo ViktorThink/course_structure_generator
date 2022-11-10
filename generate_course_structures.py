@@ -166,7 +166,7 @@ Course structure:
 def generate_course_structure(name, description, target_group, learning_goals, num_modules, language="EN"):
 
     if language != "EN":
-      name, description, target_group, learning_goals = [translate("EN", language, item) for item in [name, description, target_group, learning_goals]]
+      name, description, target_group, learning_goals = [translate(language, "EN",item) for item in [name, description, target_group, learning_goals]]
 
     model_prompt = prompt + "\n" + "Course name: " + name.strip()
     model_prompt = model_prompt + "\n" + "Description: " + description.strip()
@@ -190,7 +190,7 @@ def generate_course_structure(name, description, target_group, learning_goals, n
     course_structure = "1. " + course_structure["choices"][0]["text"].strip()
 
     if language != "EN":
-        translate(language, "EN", course_structure)
+        course_structure = translate("EN". language, course_structure)
 
     return course_structure
 
